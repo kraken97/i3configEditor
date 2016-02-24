@@ -1,2 +1,2 @@
-![GitHub Logo](/images/logo.png)
+![GitHub Logo](https://github.com/kraken97/i3configEditor/blob/master/sreen.png)
 Format: ![Alt Text](url)
