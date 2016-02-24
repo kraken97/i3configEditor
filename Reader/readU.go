@@ -23,9 +23,9 @@ func GetArr(str string) []Exp {
 		if len(constArr[i]) > 1 {
 
 			str := constArr[i]
-			start := strings.Index(str, "=#")
+			start := strings.Index(str, "#")
 			name := str[:start]
-			value := str[start+2:]
+			value := str[start+1:]
 
 			arr = append(arr, Exp{Name: name, Value: value})
 		}
@@ -72,11 +72,11 @@ func GetBlock() string {
 	return GetConst(GetFile())
 }
 func GetFile() string {
-	return ReadFile(`D:\zher\test1.java`)
+	return ReadFile(`/home/kraken/.config/i3/config`)
 }
 
 func Write(str string) {
-	path := `D:\zher\test1.java`
+	path := `/home/kraken/.config/i3/config`
 	file, err := os.Create(path)
 	defer file.Close()
 	if err != nil {

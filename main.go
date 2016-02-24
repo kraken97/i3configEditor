@@ -1,8 +1,8 @@
 package main
 
 import (
-	"configEditor/Reader"
-	//"configEditor/Utils"
+	"github.com/kraken97/configEditor/Reader"
+	"github.com/kraken97/configEditor/Utils"
 	"github.com/go-martini/martini"
 	"github.com/martini-contrib/render"
 	"net/http"
@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-	// utils.Copy(`~/.config/i3/backup`, `~/.config/i3/config`)
+	utils.Copy(`/home/kraken/.config/i3/bacp`, `/home/kraken/.config/i3/config`)
 	m := martini.Classic()
 	m.Use(render.Renderer())
 
@@ -35,7 +35,7 @@ func saveHandler(r *http.Request, rnd render.Render) {
 func getStr(r *http.Request) string {
 	str := "\n"
 	for i := 0; i < len(Data.Info); i++ {
-		str += Data.Info[i].Name + "=" + r.FormValue(Data.Info[i].Name) + "\n"
+		str += Data.Info[i].Name + "#" + r.FormValue(Data.Info[i].Name) + "\n"
 	}
 	return str
 }
