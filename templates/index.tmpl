@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-      <html lang="en">
-      <head>
-          <meta charset="UTF-8">
-          <title>martini gorm example</title>
-      </head>
-      <body>
-<h1>Items</h1>
+ <body>
+
+<div id="header">
+<h1>i3 Config Editor</h1>
+</div>
+ 
+<div id="nav">
+<h1>Stles</h1>
 <form action="/save" method="Post">
 {{ range .Info }}
 <p>name:{{ .Name }}</p>
@@ -15,7 +15,44 @@
 
 {{end}}
 <input type="submit" value="submit">
-<hr>
-<iframe  width="800" height="500" src="http://paletton.com/"  ></iframe>
-</body>
-</html>
+</div>
+
+<div id="section">
+<iframe  width=98% height=100% src="http://paletton.com/"  ></iframe>
+
+</div>
+
+<div id="footer">
+Copyright © W3Schools.com
+
+</div>
+ <style>
+#header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+#nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    
+    width:38%;
+    float:left;
+    padding:5px;
+}
+#section {
+    width:60%;
+    float:right;
+    padding: 5px
+    
+}
+#footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;
+}
+</style> 
+</body> 
