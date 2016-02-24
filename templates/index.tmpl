@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+      <html lang="en">
+      <head>
+          <meta charset="UTF-8">
+          <title>martini gorm example</title>
+      </head>
+      <body>
+<h1>Items</h1>
+<form action="/save" method="Post">
+{{ range .Info }}
+<p>name:{{ .Name }}</p>
+
+<p>value: <input type="text" name="{{.Name}}" id="{{.Name}}"  value="{{.Value}}" style="
+    background-color: #{{.Value}}"></p>
+
+{{end}}
+<input type="submit" value="submit">
+<hr>
+<iframe  width="800" height="500" src="http://paletton.com/"  ></iframe>
+</body>
+</html>
